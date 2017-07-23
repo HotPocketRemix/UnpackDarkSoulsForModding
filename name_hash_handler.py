@@ -6138,9 +6138,7 @@ def get_hash_from_string(s):
     """
     
     np.warnings.simplefilter("ignore", RuntimeWarning)
-
-    # Use numpy's implementation of uint32, since overflow is important
-    #  for this calculation.
+    
     hash_val = np.uint32(0)
     for char in bytearray(s.lower()):
         hash_val *= np.uint32(37)
